@@ -82,9 +82,9 @@
 		6B85244820D1472D0021233D /* Indoorway */ = {
 			isa = PBXGroup;
 			children = (
+				6B85244920D1472D0021233D /* AppDelegate.swift */,
 				6B1E25DA20D152A5007117BB /* Controlers */,
 				6B1E25D720D14FE0007117BB /* Storyboards */,
-				6B85244920D1472D0021233D /* AppDelegate.swift */,
 				6B1E25D620D14FB6007117BB /* Assets */,
 				6B85245520D1472E0021233D /* Info.plist */,
 			);
