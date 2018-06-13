@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchScreenViewController" customModule="Indoorway" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-Nu-JTx" userLabel="Text Container">
+                                <rect key="frame" x="115.5" y="308.5" width="144" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Lech" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a90-Uf-W6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                        <color key="textColor" name="Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDL-TG-5PB">
+                                        <rect key="frame" x="0.0" y="33" width="144" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                        <color key="textColor" name="Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a90-Uf-W6c" secondAttribute="trailing" id="LQ3-hR-F0R"/>
+                                    <constraint firstItem="bDL-TG-5PB" firstAttribute="top" secondItem="a90-Uf-W6c" secondAttribute="bottom" constant="4" id="ZvI-JZ-7HD"/>
+                                    <constraint firstAttribute="bottom" secondItem="bDL-TG-5PB" secondAttribute="bottom" id="bXg-pQ-iAz"/>
+                                    <constraint firstAttribute="trailing" secondItem="bDL-TG-5PB" secondAttribute="trailing" id="fuj-2D-qF6"/>
+                                    <constraint firstItem="a90-Uf-W6c" firstAttribute="leading" secondItem="rd3-Nu-JTx" secondAttribute="leading" id="hWe-5T-hD5"/>
+                                    <constraint firstItem="bDL-TG-5PB" firstAttribute="leading" secondItem="rd3-Nu-JTx" secondAttribute="leading" id="heP-9X-s2D"/>
+                                    <constraint firstItem="a90-Uf-W6c" firstAttribute="top" secondItem="rd3-Nu-JTx" secondAttribute="top" id="onM-4P-r9d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rd3-Nu-JTx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VD9-PE-412"/>
+                            <constraint firstItem="rd3-Nu-JTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFw-Kz-yWA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textContainerView" destination="rd3-Nu-JTx" id="o3b-Uh-MFe"/>
+                        <segue destination="YrD-uO-tfs" kind="show" identifier="MainVC" id="cuV-dU-T7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="117"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Oli-9s-uyn">
+            <objects>
+                <viewController id="YrD-uO-tfs" customClass="MainViewController" customModule="Indoorway" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6P8-1O-e5g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <viewLayoutGuide key="safeArea" id="zSS-cl-OiZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzA-WU-sK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
