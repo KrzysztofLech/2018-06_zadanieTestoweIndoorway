@@ -15,6 +15,12 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        DataManager.shared.getPhotosData {
+            self.hideSplashScreen()
+        }
+    }
+    
+    private func hideSplashScreen() {
         UIView.animate(withDuration: 1, animations: {
             self.textContainerView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }) { _ in
