@@ -81,8 +81,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
