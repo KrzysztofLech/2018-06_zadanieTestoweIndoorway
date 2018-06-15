@@ -17,7 +17,6 @@ class DataManager {
         array.reserveCapacity(5000)
         return array
     }()
-    var presentedItemsCounter: Int = 0
 
     private init() { }
     

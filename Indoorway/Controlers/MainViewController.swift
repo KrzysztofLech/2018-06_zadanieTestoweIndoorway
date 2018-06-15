@@ -25,12 +25,6 @@ class MainViewController: UIViewController {
     var itemsNumberToPresent: Int = 0 {
         didSet {
             collectionView.backgroundView = (itemsNumberToPresent == 0) ? noDataPlaceholderView : nil
-            if itemsNumberToPresent == 0 {
-                UserDefaultsManager.shared.removeObject(forKey: UserDefaultsKey.presentedItems)
-            } else {
-                DataManager.shared.presentedItemsCounter += 1
-                UserDefaultsManager.shared.write(object: itemsNumberToPresent, forKey: UserDefaultsKey.presentedItems)
-            }
         }
     }
 
@@ -44,15 +38,7 @@ class MainViewController: UIViewController {
         let nib = UINib(nibName: cellClassName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellClassName)
         
-        setupPresentedItemsCounter()
-    }
-    
-    private func setupPresentedItemsCounter() {
-        if let previousPrrsentedItems = UserDefaultsManager.shared.getObject(forKey: UserDefaultsKey.presentedItems) as? Int {
-            itemsNumberToPresent = previousPrrsentedItems
-        } else {
-            itemsNumberToPresent = 0
-        }
+        itemsNumberToPresent = UserDefaultsManager.shared.presentedItems
     }
 
     
@@ -61,12 +47,14 @@ class MainViewController: UIViewController {
     
     @IBAction func getPhotoButtonAction() {
         itemsNumberToPresent += 1
+        UserDefaultsManager.shared.presentedItems = itemsNumberToPresent
         let indexPath = IndexPath(item: itemsNumberToPresent-1, section: 0)
         collectionView.insertItems(at: [indexPath])
         collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
     
     @IBAction func clearButtonAction() {
+        UserDefaultsManager.shared.clear()
         itemsNumberToPresent = 0
         collectionView.reloadData()
     }

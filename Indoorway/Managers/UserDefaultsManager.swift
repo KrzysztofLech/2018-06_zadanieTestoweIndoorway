@@ -15,17 +15,39 @@ struct UserDefaultsKey {
 class UserDefaultsManager {
     
     static let shared = UserDefaultsManager()
+    
+    // MARK: - Private methods
+    
     private init() {}
     
-    func write(object: Any, forKey key: String) {
+    private func write(object: Any, forKey key: String) {
         UserDefaults.standard.set(object, forKey: key)
     }
     
-    func getObject(forKey key: String) -> Any? {
+    private func getObject(forKey key: String) -> Any? {
         return UserDefaults.standard.object(forKey: key)
     }
     
-    func removeObject(forKey key: String) {
+    private func removeObject(forKey key: String) {
         UserDefaults.standard.removeObject(forKey: key)
+    }
+    
+    
+    // MARK: - Public properties and methods
+    
+    var presentedItems: Int {
+        get {
+            if let number = getObject(forKey: UserDefaultsKey.presentedItems) as? Int {
+                return number
+            }
+            return 0
+        }
+        set {
+            write(object: newValue, forKey: UserDefaultsKey.presentedItems)
+        }
+    }
+    
+    func clear() {
+        removeObject(forKey: UserDefaultsKey.presentedItems)
     }
 }
