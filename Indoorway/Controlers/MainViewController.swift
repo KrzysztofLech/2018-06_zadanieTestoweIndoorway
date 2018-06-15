@@ -23,8 +23,12 @@ class MainViewController: UIViewController {
     let cellClassName = String(describing: PhotoItemCollectionViewCell.self)
     var itemsNumberToPresent: Int = 0 {
         didSet {
-            DataManager.shared.presentedItemsCounter += 1
-            UserDefaultsManager.shared.write(object: itemsNumberToPresent, forKey: UserDefaultsKey.presentedItems)
+            if itemsNumberToPresent == 0 {
+                UserDefaultsManager.shared.removeObject(forKey: UserDefaultsKey.presentedItems)
+            } else {
+                DataManager.shared.presentedItemsCounter += 1
+                UserDefaultsManager.shared.write(object: itemsNumberToPresent, forKey: UserDefaultsKey.presentedItems)
+            }
         }
     }
 
@@ -55,6 +59,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func clearButtonAction() {
+        itemsNumberToPresent = 0
+        collectionView.reloadData()
     }
 }
 
