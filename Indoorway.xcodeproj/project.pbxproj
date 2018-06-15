@@ -21,6 +21,7 @@
 		6B9FF70620D273460012652F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FF70520D273460012652F /* DataManager.swift */; };
 		6B9FF70820D2AA510012652F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FF70720D2AA510012652F /* ImageManager.swift */; };
 		6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297920D396ED00B37D26 /* CacheManager.swift */; };
+		6BC1297C20D3AE1B00B37D26 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6B9FF70520D273460012652F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B9FF70720D2AA510012652F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		6BC1297920D396ED00B37D26 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				6B9FF70520D273460012652F /* DataManager.swift */,
 				6B9FF70720D2AA510012652F /* ImageManager.swift */,
 				6BC1297920D396ED00B37D26 /* CacheManager.swift */,
+				6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				6B9FF70620D273460012652F /* DataManager.swift in Sources */,
 				6B1E25DE20D1537B007117BB /* MainViewController.swift in Sources */,
 				6B9FF70820D2AA510012652F /* ImageManager.swift in Sources */,
+				6BC1297C20D3AE1B00B37D26 /* UserDefaultsManager.swift in Sources */,
 				6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */,
 				6B1E25DC20D152F6007117BB /* LaunchScreenViewController.swift in Sources */,
 				6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */,

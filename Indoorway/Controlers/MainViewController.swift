@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     var itemsNumberToPresent: Int = 0 {
         didSet {
             DataManager.shared.presentedItemsCounter += 1
+            UserDefaultsManager.shared.write(object: itemsNumberToPresent, forKey: UserDefaultsKey.presentedItems)
         }
     }
 
@@ -36,6 +37,10 @@ class MainViewController: UIViewController {
 
         let nib = UINib(nibName: cellClassName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellClassName)
+        
+        if let previousPrrsentedItems = UserDefaultsManager.shared.getObject(forKey: UserDefaultsKey.presentedItems) as? Int {
+            itemsNumberToPresent = previousPrrsentedItems
+        }
     }
 
     

@@ -26,7 +26,7 @@ class CacheManager {
     
     private init() { }
     
-    func cache(object: AnyObject, key: String) {
+    func cache(object: AnyObject, forKey key: String) {
         CacheManager.cache.setObject(object, forKey: key as NSString)
     }
     

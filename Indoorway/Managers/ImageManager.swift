@@ -24,7 +24,7 @@ struct ImageManager {
         let session = URLSession.shared
         let downloadTask = session.downloadTask(with: url) { (url, response, error) in
             if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                CacheManager.shared.cache(object: image, key: urlString)
+                CacheManager.shared.cache(object: image, forKey: urlString)
                 DispatchQueue.main.async {
                     closure(image)
                 }
