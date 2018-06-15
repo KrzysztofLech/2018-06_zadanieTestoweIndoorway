@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataManager: NSObject {
+class DataManager {
 
     static let shared = DataManager()
 
@@ -19,6 +19,7 @@ class DataManager: NSObject {
     }()
     var presentedItemsCounter: Int = 0
 
+    private init() { }
     
     func getPhotosData(completion: @escaping (()->()) ) {
         removeAllData()

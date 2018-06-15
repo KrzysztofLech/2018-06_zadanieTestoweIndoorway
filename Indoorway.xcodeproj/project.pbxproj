@@ -20,6 +20,7 @@
 		6B9FF70420D26A120012652F /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FF70320D26A120012652F /* RequestManager.swift */; };
 		6B9FF70620D273460012652F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FF70520D273460012652F /* DataManager.swift */; };
 		6B9FF70820D2AA510012652F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FF70720D2AA510012652F /* ImageManager.swift */; };
+		6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297920D396ED00B37D26 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6B9FF70320D26A120012652F /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		6B9FF70520D273460012652F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B9FF70720D2AA510012652F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		6BC1297920D396ED00B37D26 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				6B9FF70320D26A120012652F /* RequestManager.swift */,
 				6B9FF70520D273460012652F /* DataManager.swift */,
 				6B9FF70720D2AA510012652F /* ImageManager.swift */,
+				6BC1297920D396ED00B37D26 /* CacheManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				6B9FF70820D2AA510012652F /* ImageManager.swift in Sources */,
 				6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */,
 				6B1E25DC20D152F6007117BB /* LaunchScreenViewController.swift in Sources */,
+				6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */,
 				6B9FF70420D26A120012652F /* RequestManager.swift in Sources */,
 				6B85244A20D1472D0021233D /* AppDelegate.swift in Sources */,
 				6B69857E20D1B846007CCF23 /* PhotoItem.swift in Sources */,

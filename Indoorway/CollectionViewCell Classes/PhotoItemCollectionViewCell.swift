@@ -13,6 +13,7 @@ class PhotoItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var thumbnailUrl = ""
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -26,10 +27,12 @@ class PhotoItemCollectionViewCell: UICollectionViewCell {
     
     private func resetCell() {
         photoImageView.image = nil
-        titleLabel.text = "ABC"
+        titleLabel.text = nil
+        thumbnailUrl = ""
     }
     
-    func update(with imageUrl: String, title: String) {
-        titleLabel.text = title
+    func update(withData data: PhotoItem) {
+        titleLabel.text = data.title
+        thumbnailUrl = data.thumbnailUrl
     }
 }

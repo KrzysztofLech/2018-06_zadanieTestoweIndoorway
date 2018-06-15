@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     // -------------------------------------------------
     
     let cellClassName = String(describing: PhotoItemCollectionViewCell.self)
-    var itemsNumberToPresent: Int = 1000 {
+    var itemsNumberToPresent: Int = 0 {
         didSet {
             DataManager.shared.presentedItemsCounter += 1
         }
@@ -66,9 +66,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellClassName, for: indexPath) as? PhotoItemCollectionViewCell {
             let dataToShow = DataManager.shared.data[indexPath.item]
-            cell.titleLabel.text = dataToShow.title
-            ImageManager.downloadImage(withUrl: dataToShow.thumbnailUrl) { image in
-                cell.photoImageView.image = image
+            cell.update(withData: dataToShow)
+            ImageManager.getImage(withUrl: dataToShow.thumbnailUrl) { image in
+                if cell.thumbnailUrl == dataToShow.thumbnailUrl {
+                    cell.photoImageView.image = image
+                }
             }
             return cell
         }
