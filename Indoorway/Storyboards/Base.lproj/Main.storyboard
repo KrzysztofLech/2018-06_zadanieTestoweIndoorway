@@ -165,10 +165,31 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="x8O-6T-SeN" id="Yh5-Qc-3uW"/>
+                        <outlet property="noDataPlaceholderView" destination="TgR-Gh-7oZ" id="oNY-4w-DWW"/>
                         <outlet property="rightButton" destination="Q2i-sb-OzG" id="QQd-CK-ZhT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzA-WU-sK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="TgR-Gh-7oZ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brak miniaturek do wyświetlenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odh-TE-y1C">
+                            <rect key="frame" x="40" y="40" width="160" height="48"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                            <color key="textColor" name="DarkText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Text"/>
+                    <constraints>
+                        <constraint firstItem="Odh-TE-y1C" firstAttribute="leading" secondItem="AHc-4j-dBw" secondAttribute="leading" constant="40" id="0Yd-M5-wX0"/>
+                        <constraint firstItem="AHc-4j-dBw" firstAttribute="trailing" secondItem="Odh-TE-y1C" secondAttribute="trailing" constant="40" id="n96-5m-AcE"/>
+                        <constraint firstItem="AHc-4j-dBw" firstAttribute="bottom" secondItem="Odh-TE-y1C" secondAttribute="bottom" constant="40" id="ob9-yb-qeM"/>
+                        <constraint firstItem="Odh-TE-y1C" firstAttribute="top" secondItem="AHc-4j-dBw" secondAttribute="top" constant="40" id="vlb-an-2yK"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="AHc-4j-dBw"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="116.74876847290641"/>
         </scene>
@@ -179,6 +200,12 @@
         </namedColor>
         <namedColor name="DarkText">
             <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkText">
+            <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.46200001239776611" green="0.83799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet var noDataPlaceholderView: UIView!
     
     
     // MARK: - Properties
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
     let cellClassName = String(describing: PhotoItemCollectionViewCell.self)
     var itemsNumberToPresent: Int = 0 {
         didSet {
+            collectionView.backgroundView = (itemsNumberToPresent == 0) ? noDataPlaceholderView : nil
             if itemsNumberToPresent == 0 {
                 UserDefaultsManager.shared.removeObject(forKey: UserDefaultsKey.presentedItems)
             } else {
@@ -42,8 +44,14 @@ class MainViewController: UIViewController {
         let nib = UINib(nibName: cellClassName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellClassName)
         
+        setupPresentedItemsCounter()
+    }
+    
+    private func setupPresentedItemsCounter() {
         if let previousPrrsentedItems = UserDefaultsManager.shared.getObject(forKey: UserDefaultsKey.presentedItems) as? Int {
             itemsNumberToPresent = previousPrrsentedItems
+        } else {
+            itemsNumberToPresent = 0
         }
     }
 
