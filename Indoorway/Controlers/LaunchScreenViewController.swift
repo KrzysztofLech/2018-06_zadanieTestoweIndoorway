@@ -11,11 +11,14 @@ import UIKit
 class LaunchScreenViewController: UIViewController {
 
     @IBOutlet weak var textContainerView: UIView!
+    @IBOutlet weak var activityIndicatorView: UIView!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         DataManager.shared.getPhotosData {
+            self.activityIndicatorView.isHidden = true
             self.hideSplashScreen()
         }
     }

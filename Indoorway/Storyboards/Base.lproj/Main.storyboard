@@ -47,22 +47,48 @@
                                     <constraint firstItem="a90-Uf-W6c" firstAttribute="top" secondItem="rd3-Nu-JTx" secondAttribute="top" id="onM-4P-r9d"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-Fw-04q">
+                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mTT-Ku-zKt">
+                                        <rect key="frame" x="177.5" y="10" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data downloading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-aZ-q6X">
+                                        <rect key="frame" x="152" y="40" width="71" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5DO-aZ-q6X" firstAttribute="centerX" secondItem="2vE-Fw-04q" secondAttribute="centerX" id="3Up-4O-bFQ"/>
+                                    <constraint firstItem="5DO-aZ-q6X" firstAttribute="top" secondItem="mTT-Ku-zKt" secondAttribute="bottom" constant="10" id="6CM-bF-bW5"/>
+                                    <constraint firstAttribute="height" constant="50" id="ANK-S9-fdb"/>
+                                    <constraint firstItem="mTT-Ku-zKt" firstAttribute="centerX" secondItem="2vE-Fw-04q" secondAttribute="centerX" id="ffO-bd-TX4"/>
+                                    <constraint firstAttribute="bottom" secondItem="5DO-aZ-q6X" secondAttribute="bottom" id="ltn-QZ-356"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2vE-Fw-04q" secondAttribute="bottom" constant="20" id="7u6-97-4av"/>
                             <constraint firstItem="rd3-Nu-JTx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VD9-PE-412"/>
                             <constraint firstItem="rd3-Nu-JTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFw-Kz-yWA"/>
+                            <constraint firstItem="2vE-Fw-04q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nlg-DZ-txX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2vE-Fw-04q" secondAttribute="trailing" id="vWh-XY-n7T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="2vE-Fw-04q" id="wQh-JM-a3c"/>
                         <outlet property="textContainerView" destination="rd3-Nu-JTx" id="o3b-Uh-MFe"/>
                         <segue destination="YrD-uO-tfs" kind="show" identifier="MainVC" id="cuV-dU-T7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="117"/>
+            <point key="canvasLocation" x="173.59999999999999" y="116.49175412293854"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Oli-9s-uyn">
