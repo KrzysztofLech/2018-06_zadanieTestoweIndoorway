@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,13 +25,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Lech" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a90-Uf-W6c">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <color key="textColor" name="DarkText"/>
+                                        <color key="textColor" red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDL-TG-5PB">
                                         <rect key="frame" x="0.0" y="33" width="144" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                        <color key="textColor" name="DarkText"/>
+                                        <color key="textColor" red="0.015686274510000001" green="0.1960784314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -72,19 +71,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-NE-b5K" userLabel="Top View" customClass="RoundedView" customModule="Indoorway" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-NE-b5K" userLabel="Top View">
                                 <rect key="frame" x="24" y="44" width="327" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Ez-Oo-dj6"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x8O-6T-SeN">
                                 <rect key="frame" x="23.5" y="90" width="327" height="487"/>
@@ -101,7 +93,7 @@
                                     <outlet property="delegate" destination="YrD-uO-tfs" id="hr2-Ie-atc"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-EC-RNv" userLabel="Bottom View" customClass="RoundedView" customModule="Indoorway" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-EC-RNv" userLabel="Bottom View">
                                 <rect key="frame" x="24" y="579" width="327" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onQ-xt-63i" userLabel="Left Button">
@@ -109,7 +101,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <state key="normal" title="Get Photo">
-                                            <color key="titleColor" name="DarkText"/>
+                                            <color key="titleColor" red="0.015686274510000001" green="0.1960784314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="getPhotoButtonAction" destination="YrD-uO-tfs" eventType="touchUpInside" id="KSZ-xm-fkz"/>
@@ -139,16 +131,9 @@
                                     <constraint firstItem="onQ-xt-63i" firstAttribute="leading" secondItem="v5v-EC-RNv" secondAttribute="leading" id="mBi-xF-IwB"/>
                                     <constraint firstAttribute="bottom" secondItem="onQ-xt-63i" secondAttribute="bottom" id="sHQ-rj-v2W"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.1960784314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="x8O-6T-SeN" firstAttribute="centerX" secondItem="6P8-1O-e5g" secondAttribute="centerX" id="62d-GE-AT1"/>
                             <constraint firstItem="v5v-EC-RNv" firstAttribute="width" secondItem="3Pz-NE-b5K" secondAttribute="width" id="FeN-kh-0mW"/>
@@ -177,11 +162,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brak miniaturek do wyświetlenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odh-TE-y1C">
                             <rect key="frame" x="40" y="40" width="160" height="48"/>
                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
-                            <color key="textColor" name="DarkText"/>
+                            <color key="textColor" red="0.015686274510000001" green="0.1960784314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" name="Text"/>
+                    <color key="backgroundColor" red="0.45882352941176469" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Odh-TE-y1C" firstAttribute="leading" secondItem="AHc-4j-dBw" secondAttribute="leading" constant="40" id="0Yd-M5-wX0"/>
                         <constraint firstItem="AHc-4j-dBw" firstAttribute="trailing" secondItem="Odh-TE-y1C" secondAttribute="trailing" constant="40" id="n96-5m-AcE"/>
@@ -194,15 +179,4 @@
             <point key="canvasLocation" x="968.79999999999995" y="116.74876847290641"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="Background">
-            <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DarkText">
-            <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.46200001239776611" green="0.83799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B1E25D920D1503B007117BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1E25D820D1503B007117BB /* Colors.xcassets */; };
 		6B1E25DC20D152F6007117BB /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E25DB20D152F6007117BB /* LaunchScreenViewController.swift */; };
 		6B1E25DE20D1537B007117BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E25DD20D1537B007117BB /* MainViewController.swift */; };
 		6B2C81AD20D546AA00AC44F5 /* APItest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C81AC20D546AA00AC44F5 /* APItest.swift */; };
-		6B662D1E20D171D4008E2239 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B662D1D20D171D4008E2239 /* RoundedView.swift */; };
 		6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */; };
 		6B69857B20D19E19007CCF23 /* PhotoItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */; };
 		6B69857E20D1B846007CCF23 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69857D20D1B846007CCF23 /* PhotoItem.swift */; };
@@ -37,13 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B1E25D820D1503B007117BB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6B1E25DB20D152F6007117BB /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		6B1E25DD20D1537B007117BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B2C81A220D545F200AC44F5 /* IndoorwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndoorwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2C81A620D545F200AC44F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B2C81AC20D546AA00AC44F5 /* APItest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APItest.swift; sourceTree = "<group>"; };
-		6B662D1D20D171D4008E2239 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		6B69857D20D1B846007CCF23 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
@@ -82,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				6B85245020D1472E0021233D /* Assets.xcassets */,
-				6B1E25D820D1503B007117BB /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -112,14 +107,6 @@
 				6B2C81AC20D546AA00AC44F5 /* APItest.swift */,
 			);
 			path = IndoorwayTests;
-			sourceTree = "<group>";
-		};
-		6B662D1C20D1718E008E2239 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				6B662D1D20D171D4008E2239 /* RoundedView.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6B69857720D19DDF007CCF23 /* CollectionViewCell Classes */ = {
@@ -178,7 +165,6 @@
 				6B69857F20D1BB32007CCF23 /* Managers */,
 				6B1E25DA20D152A5007117BB /* Controlers */,
 				6B1E25D720D14FE0007117BB /* Storyboards */,
-				6B662D1C20D1718E008E2239 /* Classes */,
 				6B69857720D19DDF007CCF23 /* CollectionViewCell Classes */,
 				6B1E25D620D14FB6007117BB /* Assets */,
 			);
@@ -274,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B69857B20D19E19007CCF23 /* PhotoItemCollectionViewCell.xib in Resources */,
-				6B1E25D920D1503B007117BB /* Colors.xcassets in Resources */,
 				6B85245120D1472E0021233D /* Assets.xcassets in Resources */,
 				6BADB17920D53D6E0010A685 /* Launch Screen.storyboard in Resources */,
 				6B85244F20D1472D0021233D /* Main.storyboard in Resources */,
@@ -296,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B662D1E20D171D4008E2239 /* RoundedView.swift in Sources */,
 				6B9FF70620D273460012652F /* DataManager.swift in Sources */,
 				6B1E25DE20D1537B007117BB /* MainViewController.swift in Sources */,
 				6B9FF70820D2AA510012652F /* ImageManager.swift in Sources */,
@@ -493,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = Indoorway/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = Indoorway/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
