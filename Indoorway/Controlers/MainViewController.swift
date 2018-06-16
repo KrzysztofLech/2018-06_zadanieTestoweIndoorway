@@ -13,20 +13,23 @@ class MainViewController: UIViewController {
     // MARK: - Outlets
     // -------------------------------------------------
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet var noDataPlaceholderView: UIView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var rightButton: UIButton!
+    @IBOutlet private var noDataPlaceholderView: UIView!
     
     
     // MARK: - Properties
     // -------------------------------------------------
     
-    let cellClassName = String(describing: PhotoItemCollectionViewCell.self)
-    var itemsNumberToPresent: Int = 0 {
+    private let cellClassName = String(describing: PhotoItemCollectionViewCell.self)
+    private var itemsNumberToPresent: Int = 0 {
         didSet {
             collectionView.backgroundView = (itemsNumberToPresent == 0) ? noDataPlaceholderView : nil
         }
     }
+    // Coolection View properties
+    fileprivate let cellsQuintityInRow: CGFloat = 2
+    fileprivate let sectionInset: CGFloat = 20
 
     
     // MARK: - Init Methods
@@ -60,8 +63,8 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - CollectionView Methods
-// -------------------------------------------------
+// MARK: - CollectionView Delegate & DataSource Methods
+// ----------------------------------------------------
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -82,5 +85,32 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
         return UICollectionViewCell()
+    }
+}
+
+// MARK: - CollectionView Delegate Flow Layout Methods
+// ---------------------------------------------------
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: sectionInset,left: sectionInset, bottom: sectionInset, right: sectionInset)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInset
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return cellSize()
+    }
+    
+    private func cellSize() -> CGSize {
+        let collectionViewWidth = collectionView.frame.width
+        let insetsSpace = (cellsQuintityInRow + 1) * sectionInset
+        let spaceForCells = collectionViewWidth - insetsSpace
+        let cellWidth = spaceForCells / cellsQuintityInRow
+        let cellHeight = cellWidth + 50
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
