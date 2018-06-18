@@ -79,6 +79,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.update(withData: dataToShow)
             ImageManager.getImage(withUrl: dataToShow.thumbnailUrl) { image in
                 if cell.thumbnailUrl == dataToShow.thumbnailUrl {
+                    cell.activityIndicator.stopAnimating()
                     cell.photoImageView.image = image
                 }
             }

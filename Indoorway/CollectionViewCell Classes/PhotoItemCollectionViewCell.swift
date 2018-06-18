@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoItemCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -29,6 +30,7 @@ class PhotoItemCollectionViewCell: UICollectionViewCell {
         photoImageView.image = nil
         titleLabel.text = nil
         thumbnailUrl = ""
+        activityIndicator.startAnimating()
     }
     
     func update(withData data: PhotoItem) {
