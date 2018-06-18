@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
     private var itemsNumberToPresent: Int = 0 {
         didSet {
             collectionView.backgroundView = (itemsNumberToPresent == 0) ? noDataPlaceholderView : nil
+            setupRightButton()
         }
     }
     // Coolection View properties
@@ -57,9 +58,20 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func clearButtonAction() {
-        UserDefaultsManager.shared.clear()
-        itemsNumberToPresent = 0
-        collectionView.reloadData()
+        alertWithOneButton(title: "Delete all items?", message: "Are you sure?", buttonTitle: "Delete", buttonStyle: .destructive, controller: self) { [weak self] (_) in
+            UserDefaultsManager.shared.clear()
+            self?.itemsNumberToPresent = 0
+            self?.collectionView.reloadData()
+        }
+    }
+    
+    // MARK: - UI Methods
+    // -------------------------------------------------
+    
+    private func setupRightButton() {
+        rightButton.isEnabled = itemsNumberToPresent > 0
+        let buttonTitleColor: UIColor = itemsNumberToPresent > 0 ? .red : .lightGray
+        rightButton.setTitleColor(buttonTitleColor, for: .normal)
     }
 }
 

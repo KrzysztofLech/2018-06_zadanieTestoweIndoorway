@@ -15,6 +15,7 @@
 		6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */; };
 		6B69857B20D19E19007CCF23 /* PhotoItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */; };
 		6B69857E20D1B846007CCF23 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69857D20D1B846007CCF23 /* PhotoItem.swift */; };
+		6B6D0EA420D7900F00300585 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D0EA320D7900F00300585 /* Helper.swift */; };
 		6B85244A20D1472D0021233D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B85244920D1472D0021233D /* AppDelegate.swift */; };
 		6B85244F20D1472D0021233D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B85244D20D1472D0021233D /* Main.storyboard */; };
 		6B85245120D1472E0021233D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B85245020D1472E0021233D /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		6B69857D20D1B846007CCF23 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		6B6D0EA320D7900F00300585 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6B85244620D1472D0021233D /* Indoorway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indoorway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B85244920D1472D0021233D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B85244E20D1472D0021233D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		6B6D0EA220D78FCA00300585 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D0EA320D7900F00300585 /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6B85243D20D1472D0021233D = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 				6B1E25D720D14FE0007117BB /* Storyboards */,
 				6B662D1C20D1718E008E2239 /* Classes */,
 				6B69857720D19DDF007CCF23 /* CollectionViewCell Classes */,
+				6B6D0EA220D78FCA00300585 /* Helpers */,
 				6B1E25D620D14FB6007117BB /* Assets */,
 			);
 			path = Indoorway;
@@ -307,6 +318,7 @@
 				6B9FF70420D26A120012652F /* RequestManager.swift in Sources */,
 				6B85244A20D1472D0021233D /* AppDelegate.swift in Sources */,
 				6B69857E20D1B846007CCF23 /* PhotoItem.swift in Sources */,
+				6B6D0EA420D7900F00300585 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
