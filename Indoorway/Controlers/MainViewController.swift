@@ -69,9 +69,20 @@ class MainViewController: UIViewController {
     // -------------------------------------------------
     
     private func setupRightButton() {
-        rightButton.isEnabled = itemsNumberToPresent > 0
-        let buttonTitleColor: UIColor = itemsNumberToPresent > 0 ? .red : .lightGray
-        rightButton.setTitleColor(buttonTitleColor, for: .normal)
+        if itemsNumberToPresent > 1 { return }
+
+        if itemsNumberToPresent == 0 {
+            UIView.transition(with: view, duration: 0.5, options: [], animations: {
+                self.rightButton.isHidden = true
+                self.rightButton.alpha = 0
+            })
+        } else {
+            rightButton.alpha = 0
+            rightButton.isHidden = false
+            UIView.animate(withDuration: 0.5, animations: {
+                self.rightButton.alpha = 1.0
+            })
+        }
     }
 }
 

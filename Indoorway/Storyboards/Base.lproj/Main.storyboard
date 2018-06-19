@@ -129,40 +129,44 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-EC-RNv" userLabel="Bottom View" customClass="RoundedView" customModule="Indoorway" customModuleProvider="target">
                                 <rect key="frame" x="24" y="579" width="327" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onQ-xt-63i" userLabel="Left Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Get Photo">
-                                            <color key="titleColor" name="DarkText"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="getPhotoButtonAction" destination="YrD-uO-tfs" eventType="touchUpInside" id="KSZ-xm-fkz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-sb-OzG" userLabel="Right Button">
-                                        <rect key="frame" x="234" y="0.0" width="93" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Clear">
-                                            <color key="titleColor" red="0.83921568629999999" green="0.17254901959999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clearButtonAction" destination="YrD-uO-tfs" eventType="touchUpInside" id="C8E-Td-bdz"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-WW-Neo">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onQ-xt-63i" userLabel="Left Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="232" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Get Photo">
+                                                    <color key="titleColor" name="DarkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="getPhotoButtonAction" destination="YrD-uO-tfs" eventType="touchUpInside" id="KSZ-xm-fkz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-sb-OzG" userLabel="Right Button">
+                                                <rect key="frame" x="234" y="0.0" width="93" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleColor" red="0.83921568629999999" green="0.17254901959999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButtonAction" destination="YrD-uO-tfs" eventType="touchUpInside" id="C8E-Td-bdz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="onQ-xt-63i" firstAttribute="width" secondItem="Q2i-sb-OzG" secondAttribute="width" multiplier="10:4" id="Al9-CT-N8L"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Q2i-sb-OzG" secondAttribute="trailing" id="5Ab-9B-koI"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q2i-sb-OzG" secondAttribute="bottom" id="77J-oY-Czh"/>
+                                    <constraint firstAttribute="trailing" secondItem="UqN-WW-Neo" secondAttribute="trailing" id="CrJ-gZ-kQH"/>
+                                    <constraint firstItem="UqN-WW-Neo" firstAttribute="top" secondItem="v5v-EC-RNv" secondAttribute="top" id="GX7-bf-cxt"/>
                                     <constraint firstAttribute="height" constant="44" id="PV7-PE-H62"/>
-                                    <constraint firstItem="Q2i-sb-OzG" firstAttribute="leading" secondItem="onQ-xt-63i" secondAttribute="trailing" constant="2" id="Q7y-NI-GyH"/>
-                                    <constraint firstItem="onQ-xt-63i" firstAttribute="top" secondItem="v5v-EC-RNv" secondAttribute="top" id="cUj-Vl-7gI"/>
-                                    <constraint firstItem="Q2i-sb-OzG" firstAttribute="top" secondItem="v5v-EC-RNv" secondAttribute="top" id="gvj-J4-Tkv"/>
-                                    <constraint firstItem="onQ-xt-63i" firstAttribute="width" secondItem="Q2i-sb-OzG" secondAttribute="width" multiplier="10:4" id="iy7-xS-oqW"/>
-                                    <constraint firstItem="onQ-xt-63i" firstAttribute="leading" secondItem="v5v-EC-RNv" secondAttribute="leading" id="mBi-xF-IwB"/>
-                                    <constraint firstAttribute="bottom" secondItem="onQ-xt-63i" secondAttribute="bottom" id="sHQ-rj-v2W"/>
+                                    <constraint firstItem="UqN-WW-Neo" firstAttribute="leading" secondItem="v5v-EC-RNv" secondAttribute="leading" id="ZVd-xI-aDD"/>
+                                    <constraint firstAttribute="bottom" secondItem="UqN-WW-Neo" secondAttribute="bottom" id="fwU-DO-acd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
