@@ -99,9 +99,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-NE-b5K" userLabel="Top View" customClass="RoundedView" customModule="Indoorway" customModuleProvider="target">
                                 <rect key="frame" x="24" y="44" width="327" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos 5/5000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-XU-ZhV">
+                                        <rect key="frame" x="20" y="10" width="287" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <color key="textColor" name="DarkText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Ez-Oo-dj6"/>
+                                    <constraint firstItem="TbN-XU-ZhV" firstAttribute="centerY" secondItem="3Pz-NE-b5K" secondAttribute="centerY" id="Dcb-e3-2Zx"/>
+                                    <constraint firstAttribute="trailing" secondItem="TbN-XU-ZhV" secondAttribute="trailing" constant="20" id="EOo-IW-zhL"/>
+                                    <constraint firstItem="TbN-XU-ZhV" firstAttribute="centerX" secondItem="3Pz-NE-b5K" secondAttribute="centerX" id="nTc-MX-vmc"/>
+                                    <constraint firstItem="TbN-XU-ZhV" firstAttribute="leading" secondItem="3Pz-NE-b5K" secondAttribute="leading" constant="20" id="p3V-vF-kGc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
@@ -194,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="x8O-6T-SeN" id="Yh5-Qc-3uW"/>
+                        <outlet property="headerTitleLabel" destination="TbN-XU-ZhV" id="QoO-Ra-eVp"/>
                         <outlet property="noDataPlaceholderView" destination="TgR-Gh-7oZ" id="oNY-4w-DWW"/>
                         <outlet property="rightButton" destination="Q2i-sb-OzG" id="QQd-CK-ZhT"/>
                     </connections>
@@ -226,6 +239,9 @@
     <resources>
         <namedColor name="Background">
             <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkText">
+            <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkText">
             <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

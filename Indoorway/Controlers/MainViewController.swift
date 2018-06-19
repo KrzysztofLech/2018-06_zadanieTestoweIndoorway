@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var rightButton: UIButton!
     @IBOutlet private var noDataPlaceholderView: UIView!
+    @IBOutlet private weak var headerTitleLabel: UILabel!
     
     
     // MARK: - Properties
@@ -26,6 +27,7 @@ class MainViewController: UIViewController {
         didSet {
             collectionView.backgroundView = (itemsNumberToPresent == 0) ? noDataPlaceholderView : nil
             setupRightButton()
+            setupHeaderTitle()
         }
     }
     // Coolection View properties
@@ -83,6 +85,19 @@ class MainViewController: UIViewController {
                 self.rightButton.alpha = 1.0
             })
         }
+    }
+    
+    private func setupHeaderTitle() {
+        var text: String
+        switch itemsNumberToPresent {
+        case 0:
+            text = ""
+        case 1:
+            text = String(format: "Photo: %i/5000", itemsNumberToPresent)
+        default:
+            text = String(format: "Photos: %i/5000", itemsNumberToPresent)
+        }
+        headerTitleLabel.text = text
     }
 }
 
