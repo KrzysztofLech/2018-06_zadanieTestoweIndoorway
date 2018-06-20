@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
             setupHeaderTitle()
         }
     }
+    
     // Coolection View properties
     fileprivate var cellsQuintityInRow: CGFloat = 2
     fileprivate let sectionInset: CGFloat = 20
@@ -46,10 +47,43 @@ class MainViewController: UIViewController {
 
         let nib = UINib(nibName: cellClassName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellClassName)
-
+        
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(setupView),
+                                               name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                               object: nil)
         itemsNumberToPresent = UserDefaultsManager.shared.presentedItems
+        setCellsQuintityInRow()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        refreshView(starting: true)
+    }
+
+    
+    // MARK: - Device Orientation Handloing Methods
+    // -------------------------------------------------
+    
+    @objc private func setupView() {
+        setCellsQuintityInRow()
+        refreshView()
+    }
+    
+    private func setCellsQuintityInRow() {
+        cellsQuintityInRow = UIDevice.current.orientation.isLandscape ? 4 : 2
+    }
+    
+    private func refreshView(starting: Bool = false) {
+        guard itemsNumberToPresent>0 else { return }
+        
+        let itemNumber = starting ? 0 : itemsNumberToPresent - 1
+        let indexPath = IndexPath(item: itemNumber, section: 0)
+        collectionView.reloadData()
+        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+    }
+
     
     // MARK: - Button Actions
     // -------------------------------------------------
@@ -69,6 +103,7 @@ class MainViewController: UIViewController {
             self?.collectionView.reloadData()
         }
     }
+    
     
     // MARK: - UI Methods
     // -------------------------------------------------
@@ -104,6 +139,7 @@ class MainViewController: UIViewController {
     }
 }
 
+
 // MARK: - CollectionView Delegate & DataSource Methods
 // ----------------------------------------------------
 
@@ -130,13 +166,14 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
+
 // MARK: - CollectionView Delegate Flow Layout Methods
 // ---------------------------------------------------
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: sectionInset,left: sectionInset, bottom: sectionInset, right: sectionInset)
+        return UIEdgeInsets(top: sectionInset,left: sectionInset, bottom: 0, right: sectionInset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
