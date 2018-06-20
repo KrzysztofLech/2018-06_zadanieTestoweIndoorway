@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
         }
     }
     // Coolection View properties
-    fileprivate let cellsQuintityInRow: CGFloat = 2
+    fileprivate var cellsQuintityInRow: CGFloat = 2
     fileprivate let sectionInset: CGFloat = 20
 
     
@@ -46,10 +46,10 @@ class MainViewController: UIViewController {
 
         let nib = UINib(nibName: cellClassName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellClassName)
-        
+
         itemsNumberToPresent = UserDefaultsManager.shared.presentedItems
     }
-
+    
     
     // MARK: - Button Actions
     // -------------------------------------------------
@@ -140,7 +140,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInset
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -152,7 +152,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         let insetsSpace = (cellsQuintityInRow + 1) * sectionInset
         let spaceForCells = collectionViewWidth - insetsSpace
         let cellWidth = spaceForCells / cellsQuintityInRow
-        let cellHeight = cellWidth + 50
+        let cellHeight = cellWidth + 50 + sectionInset
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }
