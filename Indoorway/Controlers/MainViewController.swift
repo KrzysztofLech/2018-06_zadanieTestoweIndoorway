@@ -13,7 +13,10 @@ class MainViewController: UIViewController {
     // MARK: - Outlets
     // -------------------------------------------------
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var topView: RoundedView!
+    @IBOutlet weak var bottomView: RoundedView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var rightButton: UIButton!
     @IBOutlet private var noDataPlaceholderView: UIView!
     @IBOutlet private weak var headerTitleLabel: UILabel!

@@ -13,6 +13,7 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var textContainerView: UIView!
     @IBOutlet weak var activityIndicatorView: UIView!
     
+    let circularTransition = CircularTransition()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -21,6 +22,11 @@ class LaunchScreenViewController: UIViewController {
             self.activityIndicatorView.isHidden = true
             self.hideSplashScreen()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let toViewController = segue.destination
+        toViewController.transitioningDelegate = circularTransition
     }
     
     private func hideSplashScreen() {

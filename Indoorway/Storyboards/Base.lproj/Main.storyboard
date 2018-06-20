@@ -50,10 +50,10 @@
                                 <rect key="frame" x="0.0" y="597" width="375" height="50"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mTT-Ku-zKt">
-                                        <rect key="frame" x="177.5" y="10" width="20" height="20"/>
+                                        <rect key="frame" x="178" y="10" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data downloading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-aZ-q6X">
-                                        <rect key="frame" x="152" y="40" width="71" height="10"/>
+                                        <rect key="frame" x="152.5" y="40" width="71" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x8O-6T-SeN">
-                                <rect key="frame" x="23.5" y="90" width="327" height="487"/>
+                                <rect key="frame" x="24" y="90" width="327" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fTG-a5-lJk">
                                     <size key="itemSize" width="100" height="150"/>
@@ -205,10 +205,12 @@
                         <viewLayoutGuide key="safeArea" id="zSS-cl-OiZ"/>
                     </view>
                     <connections>
+                        <outlet property="bottomView" destination="v5v-EC-RNv" id="NFa-xo-3BE"/>
                         <outlet property="collectionView" destination="x8O-6T-SeN" id="Yh5-Qc-3uW"/>
                         <outlet property="headerTitleLabel" destination="TbN-XU-ZhV" id="QoO-Ra-eVp"/>
                         <outlet property="noDataPlaceholderView" destination="TgR-Gh-7oZ" id="oNY-4w-DWW"/>
                         <outlet property="rightButton" destination="Q2i-sb-OzG" id="QQd-CK-ZhT"/>
+                        <outlet property="topView" destination="3Pz-NE-b5K" id="H9n-RY-Vmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzA-WU-sK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,9 +241,6 @@
     <resources>
         <namedColor name="Background">
             <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DarkText">
-            <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkText">
             <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
