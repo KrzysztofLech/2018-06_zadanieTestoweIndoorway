@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A4A61BC689C47F2B780B63E5C7D00DA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D4187F1B8F1EEEA7A0121DE67F2B7 /* Reachability.swift */; };
+		3A488C5CC0B220D88CAF1014B1BB5E7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */; };
+		59B0233A8E8473691227C65A82B2C272 /* Pods-Indoorway-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC58A83CB0D8730CFEF52ECFE41B4 /* Pods-Indoorway-dummy.m */; };
+		64F34841342E1A09123EB2D0B829A914 /* ReachabilitySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5142C47B1A75048C2649F609D38AC9 /* ReachabilitySwift-dummy.m */; };
+		7A5DA6FF2C0E0F513A9BF4C98272ADF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */; };
+		B4CD9514CE3A8BDC499F1C1E3E8AA573 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */; };
+		C8FEC8A76354D5D3A9295E962BB26467 /* ReachabilitySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2239DA93AF8EADE2936E304FDC200C /* ReachabilitySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D152138BF59D3642622748C860476CE5 /* Pods-Indoorway-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D00C2BCED56846AEA2F6BDFA829C23 /* Pods-Indoorway-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A19C7F70C3ABFA34020761416B0007FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38CF1491A5686367AF27205BDB54A43F;
+			remoteInfo = ReachabilitySwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02F4593C81014B1E67822CBEB369E7F8 /* Pods-Indoorway-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Indoorway-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1232E93405FE66BC10ED27BE1E031A7C /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = ReachabilitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DC8183AEB7A2C1F736D8736553F8CF /* Pods-Indoorway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indoorway.release.xcconfig"; sourceTree = "<group>"; };
+		25CEC58A83CB0D8730CFEF52ECFE41B4 /* Pods-Indoorway-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Indoorway-dummy.m"; sourceTree = "<group>"; };
+		34BD4E6021AF0D6D5DDE235CCE76BF51 /* Pods-Indoorway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indoorway.debug.xcconfig"; sourceTree = "<group>"; };
+		4B2239DA93AF8EADE2936E304FDC200C /* ReachabilitySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-umbrella.h"; sourceTree = "<group>"; };
+		4C9E676D029FB0CFEEC40271B94A6F46 /* ReachabilitySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReachabilitySwift.modulemap; sourceTree = "<group>"; };
+		5F38C52B35C248899423254EFDC6DDF1 /* Pods-Indoorway-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indoorway-frameworks.sh"; sourceTree = "<group>"; };
+		85D20390E738FC19537DB7A9B52B11D4 /* Pods-Indoorway-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Indoorway-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9544718ABDE9F901834852562775B416 /* ReachabilitySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-prefix.pch"; sourceTree = "<group>"; };
+		97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9D5142C47B1A75048C2649F609D38AC9 /* ReachabilitySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReachabilitySwift-dummy.m"; sourceTree = "<group>"; };
+		A69618DB501452D1506A37803D5C3EE9 /* Pods-Indoorway-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indoorway-resources.sh"; sourceTree = "<group>"; };
+		B69D4187F1B8F1EEEA7A0121DE67F2B7 /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Reachability/Reachability.swift; sourceTree = "<group>"; };
+		C2D1943E85064D81DD47713077686D09 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46B2C494A4D07E14ABD7278A4B5B2BF /* Pods_Indoorway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Indoorway.framework; path = "Pods-Indoorway.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E449573CD91B398E75AFB1B251407902 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D00C2BCED56846AEA2F6BDFA829C23 /* Pods-Indoorway-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Indoorway-umbrella.h"; sourceTree = "<group>"; };
+		E56FEB2AD510A6F3126EDE2FC618DAB1 /* Pods-Indoorway.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Indoorway.modulemap"; sourceTree = "<group>"; };
+		F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FF55BB923ABF3D6BDEE95F44FF621D90 /* ReachabilitySwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReachabilitySwift.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F199FE7D94A66C9072582D6CC3FD08A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5DA6FF2C0E0F513A9BF4C98272ADF1 /* Foundation.framework in Frameworks */,
+				B4CD9514CE3A8BDC499F1C1E3E8AA573 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFC804740B9FFD7D5889A37DCB93884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A488C5CC0B220D88CAF1014B1BB5E7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A1EA8D1D68ED3AAEB7D4341B6ED28BF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF81211F52FD6A5E8D4D4BDC76002529 /* Pods-Indoorway */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7E283C74B7E79D37D9BAAFF277942F5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9BCD5CBAACE7E3EBED55F693896BB924 /* Pods */,
+				B0A23A2A3B3156B0B9A031F1E9744B81 /* Products */,
+				2A1EA8D1D68ED3AAEB7D4341B6ED28BF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8186E3018AE78851C3DC3B346BD28400 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E449573CD91B398E75AFB1B251407902 /* Info.plist */,
+				4C9E676D029FB0CFEEC40271B94A6F46 /* ReachabilitySwift.modulemap */,
+				FF55BB923ABF3D6BDEE95F44FF621D90 /* ReachabilitySwift.xcconfig */,
+				9D5142C47B1A75048C2649F609D38AC9 /* ReachabilitySwift-dummy.m */,
+				9544718ABDE9F901834852562775B416 /* ReachabilitySwift-prefix.pch */,
+				4B2239DA93AF8EADE2936E304FDC200C /* ReachabilitySwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReachabilitySwift";
+			sourceTree = "<group>";
+		};
+		9BCD5CBAACE7E3EBED55F693896BB924 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F47FCCB16BA3F38D5553162F93FAF492 /* ReachabilitySwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0A23A2A3B3156B0B9A031F1E9744B81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D46B2C494A4D07E14ABD7278A4B5B2BF /* Pods_Indoorway.framework */,
+				1232E93405FE66BC10ED27BE1E031A7C /* Reachability.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF81211F52FD6A5E8D4D4BDC76002529 /* Pods-Indoorway */ = {
+			isa = PBXGroup;
+			children = (
+				C2D1943E85064D81DD47713077686D09 /* Info.plist */,
+				E56FEB2AD510A6F3126EDE2FC618DAB1 /* Pods-Indoorway.modulemap */,
+				02F4593C81014B1E67822CBEB369E7F8 /* Pods-Indoorway-acknowledgements.markdown */,
+				85D20390E738FC19537DB7A9B52B11D4 /* Pods-Indoorway-acknowledgements.plist */,
+				25CEC58A83CB0D8730CFEF52ECFE41B4 /* Pods-Indoorway-dummy.m */,
+				5F38C52B35C248899423254EFDC6DDF1 /* Pods-Indoorway-frameworks.sh */,
+				A69618DB501452D1506A37803D5C3EE9 /* Pods-Indoorway-resources.sh */,
+				E4D00C2BCED56846AEA2F6BDFA829C23 /* Pods-Indoorway-umbrella.h */,
+				34BD4E6021AF0D6D5DDE235CCE76BF51 /* Pods-Indoorway.debug.xcconfig */,
+				18DC8183AEB7A2C1F736D8736553F8CF /* Pods-Indoorway.release.xcconfig */,
+			);
+			name = "Pods-Indoorway";
+			path = "Target Support Files/Pods-Indoorway";
+			sourceTree = "<group>";
+		};
+		E7E283C74B7E79D37D9BAAFF277942F5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */,
+				F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F47FCCB16BA3F38D5553162F93FAF492 /* ReachabilitySwift */ = {
+			isa = PBXGroup;
+			children = (
+				B69D4187F1B8F1EEEA7A0121DE67F2B7 /* Reachability.swift */,
+				8186E3018AE78851C3DC3B346BD28400 /* Support Files */,
+			);
+			name = ReachabilitySwift;
+			path = ReachabilitySwift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		50FADAD175E0DFE9A490B94266A6E736 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FEC8A76354D5D3A9295E962BB26467 /* ReachabilitySwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8030621330043AB7D501478533D9D004 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D152138BF59D3642622748C860476CE5 /* Pods-Indoorway-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20AEE4919E849518558D3BF0AF4FA18A /* Pods-Indoorway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E108203F0AA9B584FD8E4906A71F77B8 /* Build configuration list for PBXNativeTarget "Pods-Indoorway" */;
+			buildPhases = (
+				4ACF6FC889245120D8D8C45A44B09805 /* Sources */,
+				9AFC804740B9FFD7D5889A37DCB93884 /* Frameworks */,
+				8030621330043AB7D501478533D9D004 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65FB0D4293D2472DD0A8E44AE7B95509 /* PBXTargetDependency */,
+			);
+			name = "Pods-Indoorway";
+			productName = "Pods-Indoorway";
+			productReference = D46B2C494A4D07E14ABD7278A4B5B2BF /* Pods_Indoorway.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		38CF1491A5686367AF27205BDB54A43F /* ReachabilitySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4EEF936D325A2AEB5273E0587853533 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */;
+			buildPhases = (
+				558347DCDB3584FD1288A2D9CC446869 /* Sources */,
+				1F199FE7D94A66C9072582D6CC3FD08A /* Frameworks */,
+				50FADAD175E0DFE9A490B94266A6E736 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReachabilitySwift;
+			productName = ReachabilitySwift;
+			productReference = 1232E93405FE66BC10ED27BE1E031A7C /* Reachability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B0A23A2A3B3156B0B9A031F1E9744B81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20AEE4919E849518558D3BF0AF4FA18A /* Pods-Indoorway */,
+				38CF1491A5686367AF27205BDB54A43F /* ReachabilitySwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ACF6FC889245120D8D8C45A44B09805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B0233A8E8473691227C65A82B2C272 /* Pods-Indoorway-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558347DCDB3584FD1288A2D9CC446869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A4A61BC689C47F2B780B63E5C7D00DA /* Reachability.swift in Sources */,
+				64F34841342E1A09123EB2D0B829A914 /* ReachabilitySwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65FB0D4293D2472DD0A8E44AE7B95509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReachabilitySwift;
+			target = 38CF1491A5686367AF27205BDB54A43F /* ReachabilitySwift */;
+			targetProxy = A19C7F70C3ABFA34020761416B0007FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08638A96A528B1EC32DE62F8A728389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2915B3CE50A38EAB143EC4583FF9B4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34BD4E6021AF0D6D5DDE235CCE76BF51 /* Pods-Indoorway.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Indoorway/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indoorway/Pods-Indoorway.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7AA6E06566CBC4EC6E72B16E38B1F14B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18DC8183AEB7A2C1F736D8736553F8CF /* Pods-Indoorway.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Indoorway/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indoorway/Pods-Indoorway.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BC7046F69A2A2FC965DFEA788E69FA25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF55BB923ABF3D6BDEE95F44FF621D90 /* ReachabilitySwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF0A7B4D55F15316B3B377ACBCE8E519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF55BB923ABF3D6BDEE95F44FF621D90 /* ReachabilitySwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */,
+				08638A96A528B1EC32DE62F8A728389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4EEF936D325A2AEB5273E0587853533 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC7046F69A2A2FC965DFEA788E69FA25 /* Debug */,
+				EF0A7B4D55F15316B3B377ACBCE8E519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E108203F0AA9B584FD8E4906A71F77B8 /* Build configuration list for PBXNativeTarget "Pods-Indoorway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2915B3CE50A38EAB143EC4583FF9B4AE /* Debug */,
+				7AA6E06566CBC4EC6E72B16E38B1F14B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
