@@ -16,7 +16,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var topView: RoundedView!
     @IBOutlet weak var bottomView: RoundedView!
     
+    @IBOutlet weak var collectionContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionMaskView: UIView!
+    
     @IBOutlet private weak var rightButton: UIButton!
     @IBOutlet private var noDataPlaceholderView: UIView!
     @IBOutlet private weak var headerTitleLabel: UILabel!
@@ -59,8 +62,9 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        showData()
         ReachabilityManager.shared.startMonitoring()
-        refreshView(starting: true)
     }
 
     
@@ -76,11 +80,10 @@ class MainViewController: UIViewController {
         cellsQuintityInRow = (UIApplication.shared.statusBarOrientation == .portrait) ? 2 : 4
     }
     
-    private func refreshView(starting: Bool = false) {
-        guard itemsNumberToPresent>0 else { return }
+    private func refreshView() {
+        guard itemsNumberToPresent > 0 else { return }
         
-        let itemNumber = starting ? 0 : itemsNumberToPresent - 1
-        let indexPath = IndexPath(item: itemNumber, section: 0)
+        let indexPath = IndexPath(item: itemsNumberToPresent - 1, section: 0)
         collectionView.reloadData()
         collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
@@ -105,7 +108,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func clearButtonAction() {
-        alertWithOneButtonAndCancel(title: "Delete all items?", message: "Are you sure?", buttonTitle: "Delete", buttonStyle: .destructive) { [weak self] (_) in
+        alertWithOneButtonAndCancel(title: "Delete all items?",
+                                    message: "Are you sure?",
+                                    buttonTitle: "Delete",
+                                    buttonStyle: .destructive) { [weak self] (_) in
             UserDefaultsManager.shared.clear()
             self?.itemsNumberToPresent = 0
             self?.collectionView.reloadData()
@@ -115,6 +121,22 @@ class MainViewController: UIViewController {
     
     // MARK: - UI Methods
     // -------------------------------------------------
+    
+    private func showData() {
+        let cells = collectionView.visibleCells
+        for cell in cells {
+            cell.alpha = 0.0
+            cell.transform = CGAffineTransform(scaleX: 0, y: 0)
+        }
+        collectionMaskView.isHidden = true
+        
+        for (index, cell) in cells.enumerated() {
+            UIView.animate(withDuration: 0.4, delay: 0.2 * Double(index), options: [], animations: {
+                cell.alpha = 1.0
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+        }
+    }
     
     private func setupRightButton() {
         if itemsNumberToPresent > 1 { return }
