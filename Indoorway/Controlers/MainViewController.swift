@@ -73,7 +73,7 @@ class MainViewController: UIViewController {
     }
     
     private func setCellsQuintityInRow() {
-        cellsQuintityInRow = UIDevice.current.orientation.isLandscape ? 4 : 2
+        cellsQuintityInRow = (UIApplication.shared.statusBarOrientation == .portrait) ? 2 : 4
     }
     
     private func refreshView(starting: Bool = false) {
