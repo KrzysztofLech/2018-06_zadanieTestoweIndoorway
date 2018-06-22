@@ -40,7 +40,7 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         guard
             let topView = toVC.topView,
-            let collectionView = toVC.collectionView,
+            let collectionView = toVC.collectionContainerView,
             let bottomView = toVC.bottomView
             else { return }
         
@@ -48,11 +48,12 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         self.collectionView = collectionView
         self.bottomView = bottomView
         
+        moveComponentsOutsideView()
+        
         let container = transitionContext.containerView
         container.addSubview(fromView)
         container.addSubview(toView)
         
-        moveComponentsOutsideView()
         showCircularAnimation(onView: toView)
     }
     
