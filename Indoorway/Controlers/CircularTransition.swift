@@ -10,7 +10,10 @@ import UIKit
 
 class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
-    private let duration: Double = 2.0
+    private let firstAnimDuration: Double  = 0.4
+    private let pauseDuration: Double      = 0.2
+    private let secondAnimDuration: Double = 1.6
+    
     fileprivate var transitionContext: UIViewControllerContextTransitioning!
     fileprivate var toView: UIView!
     
@@ -22,7 +25,7 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
     // ------------------------------------------------------
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
+        return firstAnimDuration + pauseDuration + secondAnimDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -80,7 +83,7 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let maskLayerAnimation = CABasicAnimation(keyPath: "path")
         maskLayerAnimation.fromValue = startCirclePath.cgPath
         maskLayerAnimation.toValue = endCirclePath.cgPath
-        maskLayerAnimation.duration = duration * 0.3
+        maskLayerAnimation.duration = firstAnimDuration
         maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         maskLayerAnimation.delegate = self
         
@@ -88,11 +91,13 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     fileprivate func showComponentAnimations() {
-        let duration = self.duration * 0.7
+        let collectionAnimDuration = secondAnimDuration * 0.6
+        let bottonAnimDuration = secondAnimDuration * 0.2
+        let topAnimDuration = secondAnimDuration * 0.2
         
         // collection view anim
-        UIView.animate(withDuration: duration * 0.6,
-                       delay: 0,
+        UIView.animate(withDuration: collectionAnimDuration,
+                       delay: pauseDuration,
                        usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 0.7,
                        options: UIViewAnimationOptions.curveEaseOut,
@@ -101,8 +106,8 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         })
  
         // botton view anim
-        UIView.animate(withDuration: duration * 0.2,
-                       delay: 0.6,
+        UIView.animate(withDuration: bottonAnimDuration,
+                       delay: collectionAnimDuration,
                        usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 1.0,
                        options: UIViewAnimationOptions.curveEaseOut,
@@ -111,8 +116,8 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         })
  
         // top view anim
-        UIView.animate(withDuration: duration * 0.3,
-                       delay: 0.8,
+        UIView.animate(withDuration: topAnimDuration,
+                       delay: collectionAnimDuration + bottonAnimDuration,
                        usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 1.0,
                        options: UIViewAnimationOptions.curveEaseOut,
