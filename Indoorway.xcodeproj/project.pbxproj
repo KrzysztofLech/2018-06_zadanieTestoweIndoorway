@@ -11,6 +11,8 @@
 		6B1E25DC20D152F6007117BB /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E25DB20D152F6007117BB /* LaunchScreenViewController.swift */; };
 		6B1E25DE20D1537B007117BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E25DD20D1537B007117BB /* MainViewController.swift */; };
 		6B2C81AD20D546AA00AC44F5 /* APItest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C81AC20D546AA00AC44F5 /* APItest.swift */; };
+		6B43A64820DBCB2200F41933 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B43A64720DBCB2200F41933 /* ReachabilityManager.swift */; };
+		6B521DBC20DCF8810077DB80 /* UIApplication+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B521DBB20DCF8810077DB80 /* UIApplication+extensions.swift */; };
 		6B662D1E20D171D4008E2239 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B662D1D20D171D4008E2239 /* RoundedView.swift */; };
 		6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */; };
 		6B69857B20D19E19007CCF23 /* PhotoItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */; };
@@ -49,6 +51,8 @@
 		6B2C81A220D545F200AC44F5 /* IndoorwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndoorwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2C81A620D545F200AC44F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B2C81AC20D546AA00AC44F5 /* APItest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APItest.swift; sourceTree = "<group>"; };
+		6B43A64720DBCB2200F41933 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		6B521DBB20DCF8810077DB80 /* UIApplication+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extensions.swift"; sourceTree = "<group>"; };
 		6B662D1D20D171D4008E2239 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		6B69857820D19E19007CCF23 /* PhotoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B69857920D19E19007CCF23 /* PhotoItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -145,6 +149,14 @@
 			path = IndoorwayTests;
 			sourceTree = "<group>";
 		};
+		6B521DBA20DCF81C0077DB80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B521DBB20DCF8810077DB80 /* UIApplication+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6B662D1C20D1718E008E2239 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +192,7 @@
 				6B9FF70720D2AA510012652F /* ImageManager.swift */,
 				6BC1297920D396ED00B37D26 /* CacheManager.swift */,
 				6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */,
+				6B43A64720DBCB2200F41933 /* ReachabilityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -223,6 +236,7 @@
 				6B1E25D720D14FE0007117BB /* Storyboards */,
 				6B662D1C20D1718E008E2239 /* Classes */,
 				6B69857720D19DDF007CCF23 /* CollectionViewCell Classes */,
+				6B521DBA20DCF81C0077DB80 /* Extensions */,
 				6B6D0EA220D78FCA00300585 /* Helpers */,
 				6B1E25D620D14FB6007117BB /* Assets */,
 			);
@@ -381,8 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B43A64820DBCB2200F41933 /* ReachabilityManager.swift in Sources */,
 				6B662D1E20D171D4008E2239 /* RoundedView.swift in Sources */,
 				6B6D0EA820D97F9200300585 /* CircularTransition.swift in Sources */,
+				6B521DBC20DCF8810077DB80 /* UIApplication+extensions.swift in Sources */,
 				6B9FF70620D273460012652F /* DataManager.swift in Sources */,
 				6B97362A20DA5BB400C24783 /* CellShadow.swift in Sources */,
 				6B1E25DE20D1537B007117BB /* MainViewController.swift in Sources */,
@@ -428,7 +444,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = IndoorwayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KL.IndoorwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -444,7 +464,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = IndoorwayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KL.IndoorwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -576,7 +600,10 @@
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = Indoorway/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KL.Indoorway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -593,7 +620,10 @@
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = Indoorway/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KL.Indoorway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

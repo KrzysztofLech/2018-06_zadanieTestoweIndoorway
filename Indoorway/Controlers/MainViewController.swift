@@ -59,6 +59,7 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        ReachabilityManager.shared.startMonitoring()
         refreshView(starting: true)
     }
 
@@ -89,6 +90,13 @@ class MainViewController: UIViewController {
     // -------------------------------------------------
     
     @IBAction func getPhotoButtonAction() {
+        guard ReachabilityManager.shared.isReachable() else {
+            alertWithOneButton(title: "No Internet!",
+                               message: "Try later",
+                               buttonTitle: "OK", buttonStyle: .default) {_ in}
+            return
+        }
+
         itemsNumberToPresent += 1
         UserDefaultsManager.shared.presentedItems = itemsNumberToPresent
         let indexPath = IndexPath(item: itemsNumberToPresent-1, section: 0)
@@ -97,7 +105,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func clearButtonAction() {
-        alertWithOneButton(title: "Delete all items?", message: "Are you sure?", buttonTitle: "Delete", buttonStyle: .destructive, controller: self) { [weak self] (_) in
+        alertWithOneButtonAndCancel(title: "Delete all items?", message: "Are you sure?", buttonTitle: "Delete", buttonStyle: .destructive) { [weak self] (_) in
             UserDefaultsManager.shared.clear()
             self?.itemsNumberToPresent = 0
             self?.collectionView.reloadData()

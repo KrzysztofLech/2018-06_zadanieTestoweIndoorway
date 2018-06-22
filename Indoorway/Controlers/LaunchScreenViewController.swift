@@ -18,15 +18,27 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DataManager.shared.getPhotosData {
-            self.activityIndicatorView.isHidden = true
-            self.hideSplashScreen()
-        }
+        getData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let toViewController = segue.destination
         toViewController.transitioningDelegate = circularTransition
+    }
+    
+    private func getData() {
+        if ReachabilityManager.shared.isReachable() {
+            DataManager.shared.getPhotosData {
+                self.activityIndicatorView.isHidden = true
+                self.hideSplashScreen()
+            }
+        } else {
+            alertWithOneButton(title: "No Internet!",
+                               message: nil,
+                               buttonTitle: "Try again", buttonStyle: .default) { _ in
+                                self.getData()
+            }
+        }
     }
     
     private func hideSplashScreen() {
