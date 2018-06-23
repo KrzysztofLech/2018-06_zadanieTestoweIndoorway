@@ -2,30 +2,30 @@
 Czerwiec 2018  
 <br> 
 
-##Treść zadania:
+## Treść zadania:
 
 **Jeden ViewController:**
 
 * z dwoma przyciskami na dole ekranu:
- * dodaj element
- * wyczyść listę
+   * dodaj element
+   * wyczyść listę
 * na pozostałej części ekranu UICollectionView zawierające elementy listy
 
 **Źródło danych:**
 
 * dane do przykładu należy pobrać ze strony: *https://jsonplaceholder.typicode.com*
-- endpoint do wykorzystania to *photos*
+* endpoint do wykorzystania to *photos*
 
 **Pobieranie elementów:**
 
 * wciskając przycisk ***dodaj element*** pobieramy kolejny element (zaczynając od pierwszego zdjęcia) i dodajemy je na listę
-- miniaturki należy pobrać asynchronicznie i cacheować do poźniejszego wykorzystania
+* miniaturki należy pobrać asynchronicznie i cacheować do poźniejszego wykorzystania
 
 **Prezentacja danych na liście (UICollectionView)**  
 
 * Pojedynczy element kolekcji zawiera:
- * tytuł
- * miniaturkę pobraną z API
+   * tytuł
+   * miniaturkę pobraną z API
 
  
 * Pomiędzy elementami Collection View są separatory (osobne, jako decoration view).
@@ -44,13 +44,13 @@ Xcode 9.4.1, Swift 4.1
 Dostępne są dwa branch'e:
 
 * **MVP-version** - wersja z funkcjonalnościami określonymi w treści zadania
- * wsparcie dla systemu iOS 9
- * obsługa iPhona w orientacji pionowej oraz poziomej
- * dostosowanie do wymogów iPhona X
- * brak bibliotek zewnętrznych
+   * wsparcie dla systemu iOS 9
+   * obsługa iPhona w orientacji pionowej oraz poziomej
+   * dostosowanie do wymogów iPhona X
+   * brak bibliotek zewnętrznych
 * **master** - wersja rozszerzona
- * wsparcie dla systemu iOS 11
- * wykorzystanie bibliotek zewnętrzych
+   * wsparcie dla systemu iOS 11
+   * wykorzystanie bibliotek zewnętrzych
 
 ## Dzaiałanie aplikacji
 ### UI:
@@ -69,7 +69,7 @@ Dostępne są dwa branch'e:
 ### API
 
 * Komunikacja z API zrealizowana jest poprzez ***URLSession***.
- * Mógłbym wykorzystać bibliotekę ***Alamofire***, jednak jeśli tylko czas mi na to pozwala, to staram się nie korzystać z bibliotek zewnętrznych. 
+   * Mógłbym wykorzystać bibliotekę ***Alamofire***, jednak jeśli tylko czas mi na to pozwala, to staram się nie korzystać z bibliotek zewnętrznych. 
 * Do rozkodowania pobranych danych wykorzystano protokół ***Codable***.
 
 ### Offline:
