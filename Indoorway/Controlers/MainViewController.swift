@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
     }
     
     // Coolection View properties
-    fileprivate var cellsQuintityInRow: CGFloat = 2
+    fileprivate var cellsQuantityInRow: CGFloat = 2
     fileprivate let sectionInset: CGFloat = 20
 
     
@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
                                                name: NSNotification.Name.UIDeviceOrientationDidChange,
                                                object: nil)
         itemsNumberToPresent = UserDefaultsManager.shared.presentedItems
-        setCellsQuintityInRow()
+        setCellsQuantityInRow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,12 +72,12 @@ class MainViewController: UIViewController {
     // -------------------------------------------------
     
     @objc private func setupView() {
-        setCellsQuintityInRow()
+        setCellsQuantityInRow()
         refreshView()
     }
     
-    private func setCellsQuintityInRow() {
-        cellsQuintityInRow = (UIApplication.shared.statusBarOrientation == .portrait) ? 2 : 4
+    private func setCellsQuantityInRow() {
+        cellsQuantityInRow = (UIApplication.shared.statusBarOrientation == .portrait) ? 2 : 4
     }
     
     private func refreshView() {
@@ -123,18 +123,21 @@ class MainViewController: UIViewController {
     // -------------------------------------------------
     
     private func showData() {
-        let cells = collectionView.visibleCells
-        for cell in cells {
+        let visibleCells = collectionView.visibleCells
+        let visibleCellsNumber = visibleCells.count
+        
+        visibleCells.forEach { cell in
             cell.alpha = 0.0
             cell.transform = CGAffineTransform(scaleX: 0, y: 0)
         }
-        collectionMaskView.isHidden = true
         
-        for (index, cell) in cells.enumerated() {
-            UIView.animate(withDuration: 0.4, delay: 0.2 * Double(index), options: [], animations: {
-                cell.alpha = 1.0
-                cell.transform = CGAffineTransform.identity
-            }, completion: nil)
+        collectionMaskView.isHidden = true
+
+        for index in 0 ..< visibleCellsNumber {
+            let indexPath = IndexPath(item: index, section: 0)
+            if let cell = collectionView.cellForItem(at: indexPath) {
+                Animations.initialShowCell(cell, withIndex: index)
+            }
         }
     }
     
@@ -194,6 +197,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        Animations.willDisplayShowCell(cell)
+    }
 }
 
 
@@ -216,9 +223,9 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     private func cellSize() -> CGSize {
         let collectionViewWidth = collectionView.frame.width
-        let insetsSpace = (cellsQuintityInRow + 1) * sectionInset
+        let insetsSpace = (cellsQuantityInRow + 1) * sectionInset
         let spaceForCells = collectionViewWidth - insetsSpace
-        let cellWidth = spaceForCells / cellsQuintityInRow
+        let cellWidth = spaceForCells / cellsQuantityInRow
         let cellHeight = cellWidth + 50 + sectionInset
         return CGSize(width: cellWidth, height: cellHeight)
     }
