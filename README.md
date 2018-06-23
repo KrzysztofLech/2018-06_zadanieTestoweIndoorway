@@ -53,7 +53,7 @@ Dostępne są dwa branch'e:
  * wykorzystanie bibliotek zewnętrzych
 
 ## Dzaiałanie aplikacji
-###UI:
+### UI:
 * Każdorazowo po uruchomieniu aplikacji pobierany jest komplet danych o elementach do wyświetlenia.  
 * Po pobraniu miniaturki elementu i jej wyświetleniu, informacja o tym zostaje zapisana w *UserDefaults*. Dzięki temu, przy ponownym uruchomieniu, wcześniej wyświetlone elementy są domyślnie prezentowane na liście. 
 * Miniaturki zdjęć są zapisywane w pamięci podręcznej wykorzystującej  ***NSCache*** - pobierane są tylko nowe dane.
