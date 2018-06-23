@@ -74,11 +74,11 @@ Dostępne są dwa branch'e:
 
 ### Offline:
 
-* Wykorzystując ***CocoaPods*** zainstalowano bibliotekę *ReachabilitySwift*.
+* Wykorzystując ***CocoaPods*** zainstalowano bibliotekę ***ReachabilitySwift***.
 * Przy próbie pobrania danych i braku dostępu do sieci zostaje wyświetlony alert z odpowiednim komunikatem.
 * Utrata dostępu do Internetu / jego przywrócenie jest komunikowane popup'em, który podaje również sposób dostępu do sieci wifi/cellular.
 
 ### Animacje
 
 * Wykorzystano animacje z famework'ów *UIKit* oraz ***Core Animation***.
-* Pomiędzy początkowym kontrolerem a głównym zastosowano ***Custom Prsentation Transition***.
+* Pomiędzy początkowym kontrolerem a głównym zastosowano ***Custom Presentation Transition***.
