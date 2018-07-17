@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -233,6 +234,7 @@
                         <outlet property="noDataPlaceholderView" destination="TgR-Gh-7oZ" id="oNY-4w-DWW"/>
                         <outlet property="rightButton" destination="Q2i-sb-OzG" id="QQd-CK-ZhT"/>
                         <outlet property="topView" destination="3Pz-NE-b5K" id="H9n-RY-Vmy"/>
+                        <segue destination="aMG-2b-4aX" kind="show" identifier="DetailsVC" id="WnK-ir-ham"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzA-WU-sK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,10 +261,82 @@
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="116.49175412293854"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="mCe-33-27h">
+            <objects>
+                <viewController id="aMG-2b-4aX" customClass="DetailsViewController" customModule="Indoorway" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sw3-9l-frw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-b4-0K9" userLabel="Content View" customClass="GradientBackground" customModule="Indoorway" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vVa-OT-zIp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vVa-OT-zIp" secondAttribute="height" multiplier="1:1" id="9XN-bL-Nuk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d5q-2d-A0Y">
+                                        <rect key="frame" x="177.5" y="178" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d13-kC-AvE">
+                                        <rect key="frame" x="20.5" y="380" width="335" height="282"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" name="DarkText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vVa-OT-zIp" firstAttribute="top" secondItem="SzB-b4-0K9" secondAttribute="top" id="6GZ-y7-sGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="vVa-OT-zIp" secondAttribute="trailing" id="Ia8-IV-asC"/>
+                                    <constraint firstItem="d13-kC-AvE" firstAttribute="width" secondItem="vVa-OT-zIp" secondAttribute="width" constant="-40" id="Ijs-uN-Gzg"/>
+                                    <constraint firstItem="d13-kC-AvE" firstAttribute="top" secondItem="vVa-OT-zIp" secondAttribute="bottom" constant="5" id="Jjc-hW-phz"/>
+                                    <constraint firstItem="vVa-OT-zIp" firstAttribute="leading" secondItem="SzB-b4-0K9" secondAttribute="leading" id="Uj4-VP-fvY"/>
+                                    <constraint firstAttribute="bottom" secondItem="d13-kC-AvE" secondAttribute="bottom" constant="5" id="Wq4-Vf-Q9x"/>
+                                    <constraint firstItem="d13-kC-AvE" firstAttribute="centerX" secondItem="SzB-b4-0K9" secondAttribute="centerX" id="b9h-En-WV1"/>
+                                    <constraint firstItem="d5q-2d-A0Y" firstAttribute="centerY" secondItem="vVa-OT-zIp" secondAttribute="centerY" id="eMS-lt-qdk"/>
+                                    <constraint firstItem="d5q-2d-A0Y" firstAttribute="centerX" secondItem="vVa-OT-zIp" secondAttribute="centerX" id="uPZ-lb-svX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="SzB-b4-0K9" firstAttribute="top" secondItem="Sw3-9l-frw" secondAttribute="top" id="2qp-Y4-uFK"/>
+                            <constraint firstItem="SzB-b4-0K9" firstAttribute="leading" secondItem="Sw3-9l-frw" secondAttribute="leading" id="IMK-NP-CAN"/>
+                            <constraint firstAttribute="bottom" secondItem="SzB-b4-0K9" secondAttribute="bottom" id="TAf-vD-aHX"/>
+                            <constraint firstAttribute="trailing" secondItem="SzB-b4-0K9" secondAttribute="trailing" id="rAH-am-qje"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fWo-hC-hMM"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QIZ-YW-I7J" appends="YES" id="xgd-61-L1S"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="d5q-2d-A0Y" id="Zgn-KM-a47"/>
+                        <outlet property="photoImageView" destination="vVa-OT-zIp" id="pwh-YH-5de"/>
+                        <outlet property="titleLabel" destination="d13-kC-AvE" id="14l-bU-xt6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sm-OE-oQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QIZ-YW-I7J">
+                    <connections>
+                        <action selector="tapGestureAction:" destination="aMG-2b-4aX" id="PsX-j7-abr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1732" y="116"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="Background">
             <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkText">
+            <color red="0.015686274510000001" green="0.1960784314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkText">
             <color red="0.015686274509803921" green="0.19607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

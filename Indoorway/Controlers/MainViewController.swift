@@ -40,6 +40,10 @@ class MainViewController: UIViewController {
     // Coolection View properties
     fileprivate var cellsQuantityInRow: CGFloat = 2
     fileprivate let sectionInset: CGFloat = 20
+    
+    fileprivate var selectedCell: PhotoItemCollectionViewCell?
+    
+    private var isShowingFirstTime = true
 
     
     // MARK: - Init Methods
@@ -63,7 +67,10 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        showData()
+        if isShowingFirstTime {
+            isShowingFirstTime = false
+            showData()
+        }
         ReachabilityManager.shared.startMonitoring()
     }
 
@@ -88,6 +95,17 @@ class MainViewController: UIViewController {
         collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
 
+    
+    // MARK: - Navigation Methods
+    // -------------------------------------------------
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailsViewController, let itemIndex = sender as? Int {
+            let dataToShow = DataManager.shared.data[itemIndex]
+            vc.itemTitle = dataToShow.title
+            vc.itemImage = selectedCell?.photoImageView.image
+        }
+    }
     
     // MARK: - Button Actions
     // -------------------------------------------------
@@ -200,6 +218,14 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         Animations.willDisplayShowCell(cell)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCell = collectionView.cellForItem(at: indexPath) as? PhotoItemCollectionViewCell
+        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.performSegue(withIdentifier: "DetailsVC", sender: indexPath.item)
+        }
     }
 }
 

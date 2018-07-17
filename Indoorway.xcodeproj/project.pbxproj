@@ -31,6 +31,7 @@
 		6BADB17920D53D6E0010A685 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BADB17820D53D6E0010A685 /* Launch Screen.storyboard */; };
 		6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297920D396ED00B37D26 /* CacheManager.swift */; };
 		6BC1297C20D3AE1B00B37D26 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */; };
+		6BCE59C520FD235100541FD0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE59C420FD235100541FD0 /* DetailsViewController.swift */; };
 		9F04CF2ACB5A0855AFE9D8AF /* Pods_Indoorway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ECEBFAB04EBC146280B751 /* Pods_Indoorway.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		6BADB17820D53D6E0010A685 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6BC1297920D396ED00B37D26 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		6BC1297B20D3AE1B00B37D26 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		6BCE59C420FD235100541FD0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D8ECEBFAB04EBC146280B751 /* Pods_Indoorway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Indoorway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB856E6532DACED660788501 /* Pods-Indoorway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indoorway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Indoorway/Pods-Indoorway.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			children = (
 				6B1E25DB20D152F6007117BB /* LaunchScreenViewController.swift */,
 				6B1E25DD20D1537B007117BB /* MainViewController.swift */,
+				6BCE59C420FD235100541FD0 /* DetailsViewController.swift */,
 				6B6D0EA720D97F9200300585 /* CircularTransition.swift */,
 			);
 			path = Controlers;
@@ -411,6 +414,7 @@
 				6B69857A20D19E19007CCF23 /* PhotoItemCollectionViewCell.swift in Sources */,
 				6B1E25DC20D152F6007117BB /* LaunchScreenViewController.swift in Sources */,
 				6BC1297A20D396ED00B37D26 /* CacheManager.swift in Sources */,
+				6BCE59C520FD235100541FD0 /* DetailsViewController.swift in Sources */,
 				6B9FF70420D26A120012652F /* RequestManager.swift in Sources */,
 				6B42DCA320DE6C6800C00A40 /* Animations.swift in Sources */,
 				6B85244A20D1472D0021233D /* AppDelegate.swift in Sources */,
