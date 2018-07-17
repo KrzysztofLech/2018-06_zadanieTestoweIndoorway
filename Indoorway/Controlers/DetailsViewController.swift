@@ -10,7 +10,6 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
 
@@ -19,8 +18,6 @@ class DetailsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        activityIndicator.isHidden = true
         
         if let image = itemImage, let text = itemTitle {
             photoImageView.image = image

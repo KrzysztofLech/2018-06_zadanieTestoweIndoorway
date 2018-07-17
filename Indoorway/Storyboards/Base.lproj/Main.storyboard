@@ -278,9 +278,6 @@
                                             <constraint firstAttribute="width" secondItem="vVa-OT-zIp" secondAttribute="height" multiplier="1:1" id="9XN-bL-Nuk"/>
                                         </constraints>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d5q-2d-A0Y">
-                                        <rect key="frame" x="177.5" y="178" width="20" height="20"/>
-                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d13-kC-AvE">
                                         <rect key="frame" x="20.5" y="380" width="335" height="282"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -297,8 +294,6 @@
                                     <constraint firstItem="vVa-OT-zIp" firstAttribute="leading" secondItem="SzB-b4-0K9" secondAttribute="leading" id="Uj4-VP-fvY"/>
                                     <constraint firstAttribute="bottom" secondItem="d13-kC-AvE" secondAttribute="bottom" constant="5" id="Wq4-Vf-Q9x"/>
                                     <constraint firstItem="d13-kC-AvE" firstAttribute="centerX" secondItem="SzB-b4-0K9" secondAttribute="centerX" id="b9h-En-WV1"/>
-                                    <constraint firstItem="d5q-2d-A0Y" firstAttribute="centerY" secondItem="vVa-OT-zIp" secondAttribute="centerY" id="eMS-lt-qdk"/>
-                                    <constraint firstItem="d5q-2d-A0Y" firstAttribute="centerX" secondItem="vVa-OT-zIp" secondAttribute="centerX" id="uPZ-lb-svX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -316,7 +311,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="d5q-2d-A0Y" id="Zgn-KM-a47"/>
                         <outlet property="photoImageView" destination="vVa-OT-zIp" id="pwh-YH-5de"/>
                         <outlet property="titleLabel" destination="d13-kC-AvE" id="14l-bU-xt6"/>
                     </connections>

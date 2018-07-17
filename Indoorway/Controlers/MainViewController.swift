@@ -44,6 +44,8 @@ class MainViewController: UIViewController {
     fileprivate var selectedCell: PhotoItemCollectionViewCell?
     
     private var isShowingFirstTime = true
+    
+    fileprivate let transition = PopTransition()
 
     
     // MARK: - Init Methods
@@ -62,6 +64,10 @@ class MainViewController: UIViewController {
                                                object: nil)
         itemsNumberToPresent = UserDefaultsManager.shared.presentedItems
         setCellsQuantityInRow()
+        
+        transition.dismissCompletion = {
+            self.selectedCell?.isHidden = false
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,6 +110,7 @@ class MainViewController: UIViewController {
             let dataToShow = DataManager.shared.data[itemIndex]
             vc.itemTitle = dataToShow.title
             vc.itemImage = selectedCell?.photoImageView.image
+            vc.transitioningDelegate = self
         }
     }
     
@@ -254,5 +261,26 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         let cellWidth = spaceForCells / cellsQuantityInRow
         let cellHeight = cellWidth + 50 + sectionInset
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+}
+
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        let selectedCellFrame = selectedCell!.superview!.convert(selectedCell!.frame, to: nil)
+        
+        transition.originFrame = selectedCellFrame
+        print(selectedCellFrame)
+        
+        transition.presenting = true
+        selectedCell?.isHidden = true
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
     }
 }
