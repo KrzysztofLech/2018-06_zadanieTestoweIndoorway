@@ -82,3 +82,4 @@ Dostępne są dwa branch'e:
 
 * Wykorzystano animacje z famework'ów *UIKit* oraz ***Core Animation***.
 * Pomiędzy początkowym kontrolerem a głównym zastosowano ***Custom Presentation Transition***.
+* Po wskazaniu elementu listy następuje przejście do widoku z detalami - tu również wykorzystano  ***Custom Presentation Transition***.
