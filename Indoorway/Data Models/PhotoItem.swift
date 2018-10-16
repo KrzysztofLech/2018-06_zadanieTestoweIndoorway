@@ -10,8 +10,8 @@ import Foundation
 
 struct PhotoItem: Codable {
     
-    var id:           Int
-    var title:        String
-    var url:          String
-    var thumbnailUrl: String
+    let id:           Int
+    let title:        String
+    let url:          String
+    let thumbnailUrl: String
 }
